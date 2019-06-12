@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
+import DogCard from "./components/DogCard";
+import dogs from "./dogs.json";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Title>Testing Your Memory</Title>
+      <DogCard
+        image={dogs[0].image}
+      />
+      <DogCard
+        image={dogs[1].image}
+      />
+      <DogCard
+        image={dogs[2].image}
+      />
+    </Wrapper>
   );
 }
 
