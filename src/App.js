@@ -3,6 +3,7 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import DogCard from "./components/DogCard";
 import dogs from "./dogs.json";
+import Nav from  "./components/Nav";
 
 class App extends Component {
   // Setting this.state.dogs to the dogs json array
@@ -24,6 +25,11 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Test Your Memory</Title>
+<Nav
+ score={this.state.currentScore}
+ topScore={this.state.topScore}
+ />
+
         {this.state.dogs.map(dog => (
           <DogCard
             removeDog={this.removeDog}
