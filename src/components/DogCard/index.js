@@ -1,27 +1,31 @@
 import React from "react";
 import "./style.css";
 
-function DogCard(props) {
-  return (
+
+// click
+
+
+
+
+//pass the image into each card so all 12 are rendered
+
+const DogCard = (props) => 
+  (
     <div className="card">
       <div className="img-container">
-        <img src={props.image} />
+        <img alt={props.image.replace(".jpg", "")} src={props.image}/>
       </div>
       <div className="content">
         <ul>
-          <li>
-            {/* <strong>Name:</strong> {props.name} */}
-          </li>
-          <li>
-            {/* <strong>Occupation:</strong> {props.occupation} */}
-          </li>
-          <li>
-            {/* <strong>Location:</strong> {props.location} */}
-          </li>
+          <li>{props.id}</li>
+          
+          
         </ul>
       </div>
+      <span onClick={() => props.removeDog(props.id)} className="remove">
+        jkjjj
+        </span>
     </div>
   );
-}
 
 export default DogCard;
